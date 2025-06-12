@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../models/bottle.dart';
 import '../../widgets/toggle_buttons.dart';
 
@@ -135,7 +136,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         bottle.title,
                         style: const TextStyle(
                           fontSize: 32,
-                          fontWeight: FontWeight.bold,
                           color: Colors.white,
                         ),
                       ),
@@ -154,6 +154,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         ),
                       ),
                       const SizedBox(height: 12),
+                      // widgets for Details tab
                       if (selectedTab == 0) ...[
                         Wrap(
                           spacing: 16,
@@ -183,13 +184,15 @@ class _DetailsScreenState extends State<DetailsScreen> {
                             );
                           }).toList(),
                         ),
+                        // widgets for Tasting notes tab
                       ] else if (selectedTab == 1) ...[
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
                               width: double.infinity,
-                              height: 40,
-                              color: Color(0xFF122329),
+                              height: 200,
+                              color: Color(0xFF0B1519),
                               child: IconButton(
                                 padding: EdgeInsets.zero,
                                 icon: const Icon(
@@ -201,14 +204,267 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 },
                               ),
                             ),
-                            Text('Content for tab 1'),
+                            const SizedBox(height: 18),
+                            Text(
+                              'Tasting notes',
+                              style: TextStyle(fontSize: 22),
+                              textAlign: TextAlign.left,
+                            ),
+                            Text(
+                              'by ${bottle.tastingNotes?.by}',
+                              style: TextStyle(fontSize: 16),
+                              textAlign: TextAlign.left,
+                            ),
+                            const SizedBox(height: 14),
+                            Container(
+                              width: double.infinity,
+                              color: Color(0xFF0B1519),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 20,
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Nose',
+                                    style: TextStyle(fontSize: 22),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                  Text(
+                                    bottle.tastingNotes!.nose,
+                                    style: TextStyle(fontSize: 16),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            Container(
+                              width: double.infinity,
+                              color: Color(0xFF0B1519),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 20,
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Palate',
+                                    style: TextStyle(fontSize: 22),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                  Text(
+                                    bottle.tastingNotes!.palate,
+                                    style: TextStyle(fontSize: 16),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            Container(
+                              width: double.infinity,
+                              color: Color(0xFF0B1519),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 20,
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Finish',
+                                    style: TextStyle(fontSize: 22),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                  Text(
+                                    bottle.tastingNotes!.finish,
+                                    style: TextStyle(fontSize: 16),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(height: 18),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Your notes',
+                                  style: TextStyle(fontSize: 22),
+                                  textAlign: TextAlign.left,
+                                ),
+                                IconButton(
+                                  icon: const Icon(
+                                    Icons.arrow_back,
+                                    color: Colors.white,
+                                  ),
+                                  onPressed: () => Navigator.pop(context),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 14),
+                            Container(
+                              width: double.infinity,
+                              color: Color(0xFF0B1519),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 20,
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Nose',
+                                    style: TextStyle(fontSize: 22),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                  Text(
+                                    bottle.yourNotes!.nose,
+                                    style: TextStyle(fontSize: 16),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            Container(
+                              width: double.infinity,
+                              color: Color(0xFF0B1519),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 20,
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Palate',
+                                    style: TextStyle(fontSize: 22),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                  Text(
+                                    bottle.yourNotes!.palate,
+                                    style: TextStyle(fontSize: 16),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            Container(
+                              width: double.infinity,
+                              color: Color(0xFF0B1519),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 20,
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Finish',
+                                    style: TextStyle(fontSize: 22),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                  Text(
+                                    bottle.yourNotes!.finish,
+                                    style: TextStyle(fontSize: 16),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ],
+                              ),
+                            ),
                           ],
                         ),
 
-                        // Other widgets for tab 1
+                        // widgets for History tab
                       ] else if (selectedTab == 2) ...[
-                        Text('Content for tab 2'),
-                        // Other widgets for tab 2
+                        Container(
+                          width: double.infinity,
+                          color: Color(0xFF0E1C21),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 20,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: bottle.history.map((item) {
+                              return Padding(
+                                padding: const EdgeInsets.only(bottom: 16.0),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SvgPicture.asset(
+                                      'assets/images/timeline.svg',
+                                    ),
+                                    const SizedBox(width: 8),
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          const Text(
+                                            'label',
+                                            style: TextStyle(fontSize: 12),
+                                          ),
+                                          Text(
+                                            item.title,
+                                            style: const TextStyle(
+                                              fontSize: 22,
+                                            ),
+                                          ),
+                                          Text(
+                                            item.description,
+                                            style: const TextStyle(
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 8),
+                                          Container(
+                                            width: double.infinity,
+                                            color: const Color(0xFF0B1519),
+                                            padding: const EdgeInsets.all(8),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              children: [
+                                                IconButton(
+                                                  padding: EdgeInsets.zero,
+                                                  icon: Transform.rotate(
+                                                    angle:
+                                                        45 * 3.1415926535 / 180,
+                                                    child: const Icon(
+                                                      Icons
+                                                          .attach_file_outlined,
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                  iconSize: 16,
+                                                  onPressed: () {
+                                                    // Your logic
+                                                  },
+                                                ),
+                                                const Text(
+                                                  'Attachments',
+                                                  style: TextStyle(
+                                                    fontSize: 11,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            }).toList(),
+                          ),
+                        ),
                       ],
                     ],
                   ),

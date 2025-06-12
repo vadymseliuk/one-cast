@@ -144,6 +144,11 @@
         "title": "Title",
         "description": "Description",
         "attachments": ["a", "b", "c"]
+      },
+      {
+        "title": "Title",
+        "description": "Description",
+        "attachments": ["a", "b", "c"]
       }
     ]
   }

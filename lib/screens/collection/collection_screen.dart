@@ -170,7 +170,6 @@ class CollectionScreen extends StatelessWidget {
           ),
         ],
         onTap: (index) {
-          // Handle tab change
         },
       ),
     );
