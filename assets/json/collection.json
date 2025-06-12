@@ -1,0 +1,150 @@
+[
+  {
+    "title": "Springbank",
+    "year": "1992#1234",
+    "amount": "112/158",
+    "imagePath": "assets/images/bottle1.png",
+    "details": [
+      { "label": "Distillery", "value": "Text" },
+      { "label": "Region", "value": "Text" },
+      { "label": "Country", "value": "Text" },
+      { "label": "Type", "value": "Text" },
+      { "label": "Age statement", "value": "Text" },
+      { "label": "Filled", "value": "Text" },
+      { "label": "Bottled", "value": "Text" },
+      { "label": "Cask number", "value": "Text" },
+      { "label": "ABV", "value": "Text" },
+      { "label": "Size", "value": "Text" },
+      { "label": "Finish", "value": "Text" }
+    ],
+    "tastingNotes": {
+      "by": "Charles MacLean MBE",
+      "nose": "Description",
+      "palate": "Description",
+      "finish": "Description"
+    },
+    "yourNotes": {
+      "nose": "Description",
+      "palate": "Description",
+      "finish": "Description"
+    },
+    "history": [
+      {
+        "title": "Title",
+        "description": "Description",
+        "attachments": ["a", "b", "c"]
+      }
+    ]
+  },
+  {
+    "title": "Springbank",
+    "year": "1992#1234",
+    "amount": "112/158",
+    "imagePath": "assets/images/bottle1.png",
+    "details": [
+      { "label": "Distillery", "value": "Text" },
+      { "label": "Region", "value": "Text" },
+      { "label": "Country", "value": "Text" },
+      { "label": "Type", "value": "Text" },
+      { "label": "Age statement", "value": "Text" },
+      { "label": "Filled", "value": "Text" },
+      { "label": "Bottled", "value": "Text" },
+      { "label": "Cask number", "value": "Text" },
+      { "label": "ABV", "value": "Text" },
+      { "label": "Size", "value": "Text" },
+      { "label": "Finish", "value": "Text" }
+    ],
+    "tastingNotes": {
+      "by": "Charles MacLean MBE",
+      "nose": "Description",
+      "palate": "Description",
+      "finish": "Description"
+    },
+    "yourNotes": {
+      "nose": "Description",
+      "palate": "Description",
+      "finish": "Description"
+    },
+    "history": [
+      {
+        "title": "Title",
+        "description": "Description",
+        "attachments": ["a", "b", "c"]
+      }
+    ]
+  },
+  {
+    "title": "Springbank",
+    "year": "1992#1234",
+    "amount": "112/158",
+    "imagePath": "assets/images/bottle1.png",
+    "details": [
+      { "label": "Distillery", "value": "Text" },
+      { "label": "Region", "value": "Text" },
+      { "label": "Country", "value": "Text" },
+      { "label": "Type", "value": "Text" },
+      { "label": "Age statement", "value": "Text" },
+      { "label": "Filled", "value": "Text" },
+      { "label": "Bottled", "value": "Text" },
+      { "label": "Cask number", "value": "Text" },
+      { "label": "ABV", "value": "Text" },
+      { "label": "Size", "value": "Text" },
+      { "label": "Finish", "value": "Text" }
+    ],
+    "tastingNotes": {
+      "by": "Charles MacLean MBE",
+      "nose": "Description",
+      "palate": "Description",
+      "finish": "Description"
+    },
+    "yourNotes": {
+      "nose": "Description",
+      "palate": "Description",
+      "finish": "Description"
+    },
+    "history": [
+      {
+        "title": "Title",
+        "description": "Description",
+        "attachments": ["a", "b", "c"]
+      }
+    ]
+  },
+  {
+    "title": "Springbank",
+    "year": "1992#1234",
+    "amount": "112/158",
+    "imagePath": "assets/images/bottle1.png",
+    "details": [
+      { "label": "Distillery", "value": "Text" },
+      { "label": "Region", "value": "Text" },
+      { "label": "Country", "value": "Text" },
+      { "label": "Type", "value": "Text" },
+      { "label": "Age statement", "value": "Text" },
+      { "label": "Filled", "value": "Text" },
+      { "label": "Bottled", "value": "Text" },
+      { "label": "Cask number", "value": "Text" },
+      { "label": "ABV", "value": "Text" },
+      { "label": "Size", "value": "Text" },
+      { "label": "Finish", "value": "Text" }
+    ],
+    "tastingNotes": {
+      "by": "Charles MacLean MBE",
+      "nose": "Description",
+      "palate": "Description",
+      "finish": "Description"
+    },
+    "yourNotes": {
+      "nose": "Description",
+      "palate": "Description",
+      "finish": "Description"
+    },
+    "history": [
+      {
+        "title": "Title",
+        "description": "Description",
+        "attachments": ["a", "b", "c"]
+      }
+    ]
+  }
+]
